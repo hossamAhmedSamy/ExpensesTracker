@@ -5,10 +5,10 @@ import 'package:intl/intl.dart';
 final formatter = DateFormat.yMd();
 
 
-enum Categorys {food , traverl ,leisure , work}
+enum Categorys {food, travel,leisure , work}
 const categoryIcons = {
   Categorys.food: Icons.lunch_dining,
-  Categorys.traverl: Icons.flight_takeoff,
+  Categorys.travel: Icons.flight_takeoff,
   Categorys.leisure: Icons.movie,
   Categorys.work: Icons.work,
 };

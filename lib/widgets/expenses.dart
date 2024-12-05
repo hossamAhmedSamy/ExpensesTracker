@@ -1,3 +1,4 @@
+import 'package:expense_tracker_app/widgets/chart/chart.dart';
 import 'package:expense_tracker_app/widgets/expenses_list/expenses_list.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker_app/models/expense.dart';
@@ -36,8 +37,8 @@ class _ExpensesState extends State<Expenses> {
 
   void removeExpense(Expense expense) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(expense.title + " expense removed"),
-      duration: Duration(seconds: 4),
+      content: Text("${expense.title} expense removed"),
+      duration: const Duration(seconds: 4),
       action: SnackBarAction(
         label: 'undo',
         onPressed: () {
@@ -92,10 +93,8 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text(
-            "The Chart",
-          ),
-          mainContent,
+          Chart(expenses:_registeredExpenses),
+           mainContent,
         ],
       ),
     );
